@@ -1,0 +1,40 @@
+# Java class files
+*.class
+
+# Maven output directory
+/target/
+
+# Logs
+*.log
+
+# OS-specific junk
+.DS_Store
+Thumbs.db
+
+# IDEs
+# IntelliJ
+.idea/
+*.iml
+*.iws
+
+# VS Code
+.vscode/
+
+# Eclipse
+.project
+.classpath
+.settings/
+
+# Environment variables or secret configs
+.env
+
+# H2 DB file (if any)
+*.h2.db
+
+# JAR/WAR files (optional - if not needed in repo)
+*.jar
+*.war
+
+
+
+
