@@ -1,14 +1,16 @@
 
 FROM openjdk:21-jdk-slim
 
+WORKDIR /app
 
-VOLUME /tmp
+# Copy everything
+COPY . .
 
+# Build the application
+RUN ./mvnw clean package -DskipTests
 
-COPY target/ResponseEntDemo-0.0.1-SNAPSHOT.jar app.jar
-
-
+# Expose port
 EXPOSE 8080
 
-# Command to run your Spring Boot app when container starts
-ENTRYPOINT ["java", "-jar", "/app.jar"]
+# Run the application
+ENTRYPOINT ["java", "-jar", "target/ResponseEntDemo-0.0.1-SNAPSHOT.jar"]
